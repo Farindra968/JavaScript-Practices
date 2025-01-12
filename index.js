@@ -488,3 +488,87 @@ setTimeout(() => {
  }, 2000);
 
  console.log(id)
+
+
+/// arr.forEach
+ // The forEach() method in JavaScript is used to execute a provided function once for each array element. It is primarily used to iterate over an array without returning a new array.
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ 
+function print(el) {
+    console.log(el);
+}
+
+arr.forEach(print)
+
+arr.forEach(function (el) {
+    console.log(el)
+})
+
+//With arrow function
+arr.forEach( (el) =>{
+    console.log(el)
+})
+
+
+//forEach in object
+let student = [
+    {
+        name: 'Raj',
+        age: 22,
+    },
+    {
+        name: 'Ram',
+        age: 26,
+    },
+    {
+        name: 'Damesh',
+        age: 30,
+    },
+]
+
+student.forEach((obj) => (
+    console.log(obj.age)
+))
+
+// Map
+let students3 = [
+    {
+        name: 'Raj',
+        age: 22,
+    },
+    {
+        name: 'Ram',
+        age: 26,
+    },
+    {
+        name: 'Damesh',
+        age: 30,
+    },
+]
+
+students3.map((obj) => (
+    console.log(obj.age)
+))
+
+
+// Filter
+/// The arr.filter method in JavaScript creates a new array containing all elements of the original array (arr) that pass a specified test implemented by a provided callback function.
+
+
+let getNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+let evenNum = getNum.filter((item) => {
+    return item % 2 !== 0;
+})
+
+
+// Every
+
+/// arr.every() is a JavaScript array method that checks if every element in an array satisfies a given condition (callback function). It returns true if all elements pass the test, otherwise false.
+
+let even = [1, 3, 5, 7, 9].every((el) => el % 2 == 0)
+console.log(even)
+
+let someEven = [1, 3, 5, 8, 9].some((el) => el % 2 == 0)
+console.log(someEven)
