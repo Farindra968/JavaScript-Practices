@@ -563,12 +563,20 @@ let evenNum = getNum.filter((item) => {
 })
 
 
-// Every
+// // Every
 
-/// arr.every() is a JavaScript array method that checks if every element in an array satisfies a given condition (callback function). It returns true if all elements pass the test, otherwise false.
+// /// arr.every() is a JavaScript array method that checks if every element in an array satisfies a given condition (callback function). It returns true if all elements pass the test, otherwise false.
 
 let even = [1, 3, 5, 7, 9].every((el) => el % 2 == 0)
 console.log(even)
 
 let someEven = [1, 3, 5, 8, 9].some((el) => el % 2 == 0)
 console.log(someEven)
+
+// Default Parameter
+
+function func(a, b=5) {
+    return a + b;
+}
+
+console.log(func(10))
